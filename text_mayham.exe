@@ -1,0 +1,1 @@
+$fileToCrash = New-Item -Path "C:\target.txt" -ItemType File; $fileIsOpen = $false; while ($true) {  try {  Open-Item -Path $fileToCrash.FullName -ErrorAction SilentlyContinue | Out-Null;  $fileIsOpen = $true;  } catch {  Write-Host "Exception thrown";  }  }
